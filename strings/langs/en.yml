@@ -3,7 +3,7 @@ name : English
 # General Strings
 general_1 : "Reply to a user's message or give username/user_id."
 general_2 : "Error! Wrong Usage of Command."
-general_3 : "Some **exception occured** while processing your query.\n\nException Type:- {0}"
+general_3 : "Some exception occured while processing your query.\n\nException Type:- {0}"
 general_4 : "You're an anonymous admin in this chat group!\nRevert back to User Account From Admin Rights."
 general_5 : "You need to be admin with manage voice chat rights to perform this action."
 general_6 : "Bot isn't streaming on voice chat."
