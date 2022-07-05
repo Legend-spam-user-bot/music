@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://telegra.ph/file/e17f42bc195635b668d6d.jpg" alt="ICON" width="80%"/></p>
 
-# SiestaXMusic
+# TeddyXMusic
 
 [SiestaXMusic](https://github.com/TechShreyash/SiestaXMusic) is a Powerful Telegram Music+Video Bot written in Python using Pyrogram and Py-Tgcalls by which you can stream songs, video and even live streams in your group calls via various sources.
 
@@ -55,6 +55,7 @@ For more information on the technologies that power the SiestaXMusic, check out 
 
 - Generate a Pyrogram String Session via [Telegram String Generation Bot](https://t.me/YukkiStringBot)
 
+#[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/U-dpI2?referralCode=W_om0h)
 
 ## 🖇 Heroku Deployment
 
