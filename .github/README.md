@@ -1,10 +1,10 @@
 <h3>⚠️ This repo is just a clone of <a href="https://github.com/TeamYukki/YukkiMusicBot">YukkiMusicBot</a>. All credits goes to devs of <a href="https://github.com/TeamYukki/YukkiMusicBot/graphs/contributors">YukkiMusicBot</a>.</h3>
 
-<p align="center"><img src="https://telegra.ph/file/e17f42bc195635b668d6d.jpg" alt="ICON" width="80%"/></p>
+<p align="center"><img src="https://telegra.ph/file/84391a64cc271dde56ab7.jpg" alt="ICON" width="80%"/></p>
 
 # TeddyXMusic
 
-[SiestaXMusic](https://github.com/TechShreyash/SiestaXMusic) is a Powerful Telegram Music+Video Bot written in Python using Pyrogram and Py-Tgcalls by which you can stream songs, video and even live streams in your group calls via various sources.
+[SiestaXMusic](https://github.com/SRUJANSBOT/Music) is a Powerful Telegram Music+Video Bot written in Python using Pyrogram and Py-Tgcalls by which you can stream songs, video and even live streams in your group calls via various sources.
 
 * Youtube, Soundcloud, Apple Music, Spotify, Resso and Telegram Audios & Videos support.
 * Written from scratch, making it stable and less crashes.
