@@ -79,8 +79,8 @@ async def executor(client, message):
     elif stdout:
         evaluation = stdout
     else:
-        evaluation = "Success"
-    final_output = f"**OUTPUT**:\n```{evaluation.strip()}```"
+        evaluation = "Sᴜᴄᴄᴇss"
+    final_output = f"**Oᴜᴛᴘᴜᴛ**:\n```{evaluation.strip()}```"
     if len(final_output) > 4096:
         filename = "output.txt"
         with open(filename, "w+", encoding="utf8") as out_file:
@@ -139,7 +139,7 @@ async def forceclose_command(_, CallbackQuery):
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(
-                "You're not allowed to close this.", show_alert=True
+                "Yᴜʀ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴄʟᴏsᴇ ᴛʜɪs.", show_alert=True
             )
         except:
             return
@@ -159,7 +159,7 @@ async def forceclose_command(_, CallbackQuery):
 async def shellrunner(client, message):
     if len(message.command) < 2:
         return await edit_or_reply(
-            message, text="**Usage:**\n/sh git pull"
+            message, text="**Usᴀɢᴇ:**\n/sh git pull"
         )
     text = message.text.split(None, 1)[1]
     if "\n" in text:
@@ -178,7 +178,7 @@ async def shellrunner(client, message):
             except Exception as err:
                 print(err)
                 await edit_or_reply(
-                    message, text=f"**ERROR:**\n```{err}```"
+                    message, text=f"**Eʀʀᴏʀ:**\n```{err}```"
                 )
             output += f"**{code}**\n"
             output += process.stdout.read()[:-1].decode("utf-8")
@@ -202,7 +202,7 @@ async def shellrunner(client, message):
                 tb=exc_tb,
             )
             return await edit_or_reply(
-                message, text=f"**ERROR:**\n```{''.join(errors)}```"
+                message, text=f"**Eʀʀᴏʀ:**\n```{''.join(errors)}```"
             )
         output = process.stdout.read()[:-1].decode("utf-8")
     if str(output) == "\n":
@@ -219,7 +219,7 @@ async def shellrunner(client, message):
             )
             return os.remove("output.txt")
         await edit_or_reply(
-            message, text=f"**OUTPUT:**\n```{output}```"
+            message, text=f"**Oᴜᴛᴘᴜᴛ:**\n```{output}```"
         )
     else:
         await edit_or_reply(message, text="**OUTPUT: **\n`No output`")
