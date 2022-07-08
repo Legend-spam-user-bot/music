@@ -113,7 +113,7 @@ async def start_comm(client, message: Message, _):
                 sender_name = message.from_user.first_name
                 return await app.send_message(
                     config.LOG_GROUP_ID,
-                    f"{message.from_user.mention} has just started bot to check <code>SUDOLIST</code>\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}",
+                    f"{message.from_user.mention} ʜᴀs ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <code>SUDOLIST</code>\n\n**Usᴇʀ ɪᴅ:** {sender_id}\n**Usᴇʀ ɴᴀᴍᴇ:** {sender_name}",
                 )
             return
         if name[0:3] == "lyr":
@@ -129,7 +129,7 @@ async def start_comm(client, message: Message, _):
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎 Fetching Info!")
+            m = await message.reply_text("🧐 Fᴇᴛᴄʜɪɴɢ ɪɴғᴏ!")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -145,26 +145,26 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+🔍__**Vɪᴇᴅᴏ ɪɴғᴏʀᴍᴀᴛɪᴏɴ**__
 
-❇️**Title:** {title}
+🔰**Tɪᴛʟᴇ:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳**Dᴜʀᴀᴛɪᴏɴ:** {duration} Mɪɴs
+👀**Vɪᴇᴡs:** `{views}`
+⏰**Pᴜʙʟɪsʜᴇᴅ ᴛɪᴍᴇ:** {published}
+🎥**Cʜᴀɴɴᴇʟ ɴᴀᴍᴇ:** {channel}
+📎**Cʜᴀɴɴᴇʟ ʟɪɴᴋ:** [ʜᴇʀᴇ ʙᴀʙʏ]({channellink})
+🔗**Vɪᴅᴇᴏ ʟɪɴᴋ:** [ʟɪɴᴋ ʙᴀʙʏ]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+🕶️ __Sᴇᴀʀᴄʜᴇᴅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ {config.MUSIC_BOT_NAME}__"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch ", url=f"{link}"
+                            text="🥽 Wᴀᴛᴄʜ ", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🗑️ Cʟᴏsᴇ", callback_data="close"
                         ),
                     ],
                 ]
