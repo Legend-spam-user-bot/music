@@ -97,16 +97,16 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️Duration:** Unknown Duration Stream\n\nClick on button below to get whole queued list."
+        "**⌛️Dᴜʀᴀᴛɪᴏɴ:** Uɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ sᴛʀᴇᴀᴍ\n\nCʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
         if DUR == "Unknown"
-        else "\nClick on button below to get whole queued list."
+        else "\nCʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} Player**
+    cap = f"""**{config.MUSIC_BOT_NAME} Pʟᴀʏᴇʀ**
 
-🎥**Playing:** {title}
+📺**Pʟᴀʏɪɴɢ:** {title}
 
-🔗**Stream Type:** {typo}
-🙍‍♂️**Played By:** {user}
+📡**Sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** {typo}
+👶**Pʟᴀʏᴇᴅ ʙʏ:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, "c" if cplay else "g", videoid)
@@ -203,11 +203,11 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     for x in got:
         j += 1
         if j == 1:
-            msg += f'Currently Playing:\n\n🏷Title: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
+            msg += f'Cᴜʀʀᴇɴᴛʟʏ ᴘʟᴀʏɪɴɢ:\n\n🔖Tɪᴛʟᴇ: {x["title"]}\nDᴜʀᴀᴛɪᴏɴ: {x["dur"]}\nBʏ: {x["by"]}\n\n'
         elif j == 2:
-            msg += f'Queued:\n\n🏷Title: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
+            msg += f'Qᴜᴇᴜᴇᴅ:\n\n🔖Tɪᴛʟᴇ: {x["title"]}\nDᴜʀᴀᴛɪᴏɴ: {x["dur"]}\nBʏ: {x["by"]}\n\n'
         else:
-            msg += f'🏷Title: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
+            msg += f'🔖Tɪᴛʟᴇ: {x["title"]}\nDᴜʀᴀᴛɪᴏɴ: {x["dur"]}\nBʏ: {x["by"]}\n\n'
     if "Queued" in msg:
         if len(msg) < 700:
             await asyncio.sleep(1)
@@ -215,7 +215,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
                 msg, reply_markup=buttons
             )
         if "🏷" in msg:
-            msg = msg.replace("🏷", "")
+            msg = msg.replace("🔖", "")
         link = await Yukkibin(msg)
         med = InputMediaPhoto(
             media=link, caption=_["queue_3"].format(link)
@@ -277,16 +277,16 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️Duration:** Unknown Duration Stream\n\nClick on button below to get whole queued list."
+        "**⌛️Dᴜʀᴀᴛɪᴏɴ:** Uɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛɪᴏɴ sᴛʀᴇᴀᴍ\n\nCʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
         if DUR == "Unknown"
-        else "\nClick on button below to get whole queued list."
+        else "\nCʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
     )
-    cap = f"""**{config.MUSIC_BOT_NAME} Player**
+    cap = f"""**{config.MUSIC_BOT_NAME} Pʟᴀʏᴇʀ**
 
-🎥**Playing:** {title}
+📺**Pʟᴀʏɪɴɢ:** {title}
 
-🔗**Stream Type:** {typo}
-🙍‍♂️**Played By:** {user}
+📡**Sᴛʀᴇᴀᴍ ᴛʏᴘᴇ:** {typo}
+👶**Pʟᴀʏᴇᴅ ʙʏ:** {user}
 {send}"""
     upl = (
         queue_markup(_, DUR, cplay, videoid)
